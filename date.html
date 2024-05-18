@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
 
     <style>
 
@@ -29,6 +31,10 @@
         }
 
            
+        .greet{
+            font-size: 3em;
+        }
+
         .date {
       
             font-family: monospace;
@@ -65,6 +71,7 @@
 <div class="container>">
     <div class="widget">
 
+            <div class="greet" id="greet"></div>
 
                 <div class="date" id="date"></div>
                 <div class="clock">
@@ -86,7 +93,18 @@
 
 <script>
 
+function dispalyGreetings(today){
+        hrs = today.getHours();
+        name=""
+        if (hrs < 12)
+            greet = 'Good Morning  '+name;
+        else if (hrs >= 12 && hrs <= 17)
+            greet = 'Good Afternoon '+name;
+        else if (hrs >= 17 && hrs <= 24)
+            greet = 'Good Evening  '+name;
+        document.getElementById('greet').innerHTML = greet;
 
+    }
 
     function dispalyDate(today) {  
        
