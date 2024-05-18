@@ -31,9 +31,7 @@
         }
 
            
-        .greet{
-            font-size: 3em;
-        }
+
 
         .date {
       
@@ -71,7 +69,6 @@
 <div class="container>">
     <div class="widget">
 
-            <div class="greet" id="greet"></div>
 
                 <div class="date" id="date"></div>
                 <div class="clock">
@@ -97,11 +94,11 @@ function dispalyGreetings(today){
         hrs = today.getHours();
         name=""
         if (hrs < 12)
-            greet = 'Good Morning  '+name;
+            greet = '';
         else if (hrs >= 12 && hrs <= 17)
-            greet = 'Good Afternoon '+name;
+            greet = '';
         else if (hrs >= 17 && hrs <= 24)
-            greet = 'Good Evening  '+name;
+            greet = '';
         document.getElementById('greet').innerHTML = greet;
 
     }
